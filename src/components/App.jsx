@@ -5,7 +5,7 @@ export default class App extends React.Component {
         var moment = require('moment');
         moment.locale('ja');
 
-        console.log(moment().format());
+        if (process.env.NODE_ENV !== 'production') console.log(moment().format());
 
         return (
             <div style={{textAlign: 'center'}}>

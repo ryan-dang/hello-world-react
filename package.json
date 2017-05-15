@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server"
+    "build:dev": "webpack-dev-server --env=dev",
+    "build:prod": "webpack-dev-server --env=prod"
   },
   "dependencies": {
     "html-webpack-plugin": "^2.28.0",
@@ -13,7 +14,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.4.5",
+    "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
