@@ -5,7 +5,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: './src/index.js'
+        app: './src/index.js'
     },
     output: {
         path: path.join(__dirname, "dist"),
