@@ -1,6 +1,6 @@
 import React from 'react';
 
-const moment = require('moment');
+import moment from 'moment';
 
 export default class App extends React.Component {
   render() {
