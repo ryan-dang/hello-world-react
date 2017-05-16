@@ -3,13 +3,18 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
+const ASSETS_PATH = path.resolve('assets');
+const APP_FILE_PATH = './src/index.js';
+const PUBLIC_PATH = path.join(__dirname, "public");
+
 module.exports = {
     entry: {
-        app: './src/index.js'
+        app: APP_FILE_PATH
     },
     output: {
-        path: path.join(__dirname, "dist"),
-        filename: '[name].[chunkhash].js',
+        path: PUBLIC_PATH,
+        filename: 'js/[name].[chunkhash].js',
+        publicPath: '/',
     },
 
     module: {
