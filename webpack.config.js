@@ -1,3 +1,12 @@
 module.exports = (env = {}) => {
-  return require(`./webpack.${env}.js`)
+
+    try {
+        if (['dev', 'prod'].indexOf(env) === -1) {
+            throw new Error('\'' + env + "' is not valid env flag.  Please pass '--env dev' or '--env prod'.")
+        }
+    } catch (e) {
+        return console.error(e)
+    }
+
+    return require('./webpack/' + env + '.js')
 }
